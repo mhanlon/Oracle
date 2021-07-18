@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let ideaGenerator = IdeaGenerator()
+    
     @IBOutlet var answerLabel: UILabel!
     
     override func viewDidLoad() {
@@ -17,7 +19,7 @@ class ViewController: UIViewController {
 
     @IBAction func createButtonPressed(_ sender: Any) {
         print("Generating an idea...")
-        answerLabel.text = "I have no idea!"
+        answerLabel.text = ideaGenerator.generateIdea()
     }
     
 }
